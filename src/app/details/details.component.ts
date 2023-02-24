@@ -15,7 +15,7 @@ export class DetailsComponent {
   constructor (private route: ActivatedRoute, private cartService: CartService) {}
 
   addToCart() {
-    alert("product has been added to the cart");
+    alert("Product has been added to the cart.");
     this.cartService.addToCart(this.product);
   }
 

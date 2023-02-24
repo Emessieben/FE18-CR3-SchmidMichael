@@ -33,7 +33,7 @@ export class CartComponent implements OnInit {
     if(this.checkoutForm.valid) {
       this.cart = this.cartService.clearCart();
       this.checkoutForm.reset();
-      this.cart = [];
+      this.summary()
     }
   }
 
@@ -52,6 +52,8 @@ export class CartComponent implements OnInit {
   ngOnInit():void {
     this.cart = this.cartService.getCart();
     this.summary()
+    console.log(this.cart);
+    
   }
 
 }

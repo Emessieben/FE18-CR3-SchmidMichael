@@ -15,7 +15,7 @@ export class MenuComponent {
   }
 
   addToCart(product: IProduct) {
-    alert("added");
+    alert("Product has been added to the cart.");
     this.cartService.addToCart(product);
   }
 }
