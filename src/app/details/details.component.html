@@ -1,0 +1,14 @@
+<div class="container my-5">
+    <h1>Product Details</h1>
+
+
+    <div class="d-flex">
+        <div class="flex-shrink-0">
+            <img src="{{ product.image }}" alt="...">
+        </div>
+        <div class="flex-grow-1 ms-3">
+            {{ product.name }} {{ product.price }} <br>
+            <p class="btn btn-warning" (click)="addToCart()">Add to cart</p>
+        </div>
+    </div>
+</div>
