@@ -14,18 +14,19 @@ export class CartComponent implements OnInit {
 
   constructor (private cartService:CartService, private formBuilder:FormBuilder){}
 
-  amount: number = 0; // from beginning 0
+  amount: number = 0; 
   service: number = 0;
   discount: number = 0;
   totalPrice: number = 0;
-  // items: IProduct[] = [];
-  checkoutForm = this.formBuilder.group({ //form input
+
+  checkoutForm = this.formBuilder.group({
     name: '',
     address: '',
   });
 
+
+  // clear the cart after purchase
   clearCart() {
-    window.alert('Your cart has been cleared'); //optional
     this.cart = this.cartService.clearCart();
   }
 
@@ -35,8 +36,10 @@ export class CartComponent implements OnInit {
       this.checkoutForm.reset();
       this.summary()
     }
+    alert('Your cart has been cleared, we send the bill via email.'); 
   }
 
+  // sum the total price
   summary(){
     for(let val of this.cart) {
       this.amount = this.amount + val.price
@@ -52,8 +55,7 @@ export class CartComponent implements OnInit {
   ngOnInit():void {
     this.cart = this.cartService.getCart();
     this.summary()
-    console.log(this.cart);
-    
+    // console.log(this.cart);
   }
 
 }
