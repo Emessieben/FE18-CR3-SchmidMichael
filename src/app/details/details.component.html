@@ -1,14 +1,20 @@
-<div class="container my-5">
-    <h1>Product Details</h1>
-
+<div class="container my-5 detail-container">
+    <h1 class="text-center my-5">Product Details</h1>
+    <hr>
 
     <div class="d-flex">
-        <div class="flex-shrink-0">
-            <img src="{{ product.image }}" alt="...">
-        </div>
-        <div class="flex-grow-1 ms-3">
-            {{ product.name }} {{ product.price }} <br>
-            <p class="btn btn-warning" (click)="addToCart()">Add to cart</p>
-        </div>
-    </div>
+        <div class="card mb-3" style="max-width: 900px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{product.image}}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.name}}</h5>
+                  <p class="card-text">{{product.details}}</p>
+                  <button class="btn btn-outline-success" (click)="addToCart()"><i class="bi bi-cart-plus-fill"></i> add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
 </div>

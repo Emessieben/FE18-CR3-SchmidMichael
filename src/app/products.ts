@@ -18,7 +18,7 @@ export let products = [{
     price: 14,
     details: "Quattro stagioni pizza or four seasons pizza is one of the best Italian pizzas out there, with artichokes, mushrooms, olives and ham. This authentic Italian pizza is incredibly delicious and fun to make.",
     allergy: "4ER, PL3",
-    available: true,
+    available: false,
 },{
     name: "Spagetti Carbonara",
     image: "https://cdn.pixabay.com/photo/2015/04/08/13/13/pasta-712664_1280.jpg",

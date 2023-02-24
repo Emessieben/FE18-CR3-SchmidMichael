@@ -13,5 +13,12 @@ export class CartService {
   getCart() {
     return this.cart;
   }
+
+  clearCart(){
+    this.cart = [];
+    return this.cart;
+  }
+
   constructor() { }
+  
 }
