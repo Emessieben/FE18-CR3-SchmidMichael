@@ -57,5 +57,5 @@ export class CartComponent implements OnInit {
     this.summary()
     // console.log(this.cart);
   }
-
+  
 }
